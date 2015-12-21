@@ -25,7 +25,7 @@ function bones_ahoy() {
   add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  // require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );

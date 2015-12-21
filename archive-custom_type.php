@@ -11,10 +11,7 @@
 * For more info: http://codex.wordpress.org/Post_Type_Templates
 */
 ?>
-<?php get_header(); ?>
-<div id="content" class="site-wrapper clearfix">
-<div id="inner-content" class="column-wrapper">
-<main id="main" class="column column-66 clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<?php include('includes/_page-start.php'); ?> 
 
 	<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
@@ -49,23 +46,8 @@
 
 		<?php else : ?>
 
-				<article id="post-not-found" class="hentry clearfix">
-					<header class="article-header">
-						<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-					</header>
-					<section class="entry-content">
-						<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-					</section>
-					<footer class="article-footer">
-							<p><?php _e( 'This is the error message in the custom posty type archive template.', 'bonestheme' ); ?></p>
-					</footer>
-				</article>
+			<?php include('includes/_article-notfound.php'); ?> 
 
 		<?php endif; ?>
 
-	</main>
-
-<?php get_sidebar(); ?>
-</div>
-</div>
-<?php get_footer(); ?>
+<?php include('includes/_page-end-sidebar.php'); ?>

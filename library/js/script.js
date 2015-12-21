@@ -18,8 +18,8 @@ var WPscript = {
 	}
 };
 
-$(function() {
+jQuery(function() {
 	"use strict";
 	WPscript.init();
-	$(window).resize(responsive.fireEvents);
+	jQuery(window).resize(responsive.fireEvents);
 });
