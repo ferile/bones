@@ -1,14 +1,15 @@
 # BONES CHANGE LOG & HISTORY
+# Forked by Andy Fairlie for personal use
 
-This theme is meant to make development easier & take
-advantage of modern web development & design techniques.
-For more information, please visit:
-
+A forked theme, many thanks to Eddie!
 http://themble.com/bones/
 
 Author: Eddie Machado
+Forked by : Andrew Fairlie
 
 *******************************************************************
+
+/* Forked here by Andy */
 
 /* 1.71 update */
 - added spacing to the password fields (thx @murtaugh)

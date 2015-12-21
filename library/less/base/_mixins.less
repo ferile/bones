@@ -9,7 +9,7 @@
 		 -webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
-} 
+}
 
 .font-face-extended(@name, @weight, @style, @filename) {
 	@font-face {
@@ -22,7 +22,6 @@
 	}
 }
 
-
 // Font Sizing
 // ------------
 .font-size(@sizeValue) {
@@ -32,16 +31,14 @@
 
 
 
-
 // Columns
 // -------
-
 .column-wrapper(@gutter : 20px) {
 	margin-left: -@gutter/2;
 	margin-right: -@gutter/2;
 	.wrap();
-	.flexbox();
-
+	.flexbox();  
+ 
 	.column {
 		padding-left: @gutter/2;
 		padding-right: @gutter/2;
@@ -57,12 +54,6 @@
 	text-align: center;
 	border-radius: 50%;
 	line-height: @diameter;
-}
-
-// Inline block mixin
-// ------------------
-.inline-block() {
-	display: inline-block;
 }
 
 .clearfix() {
@@ -187,6 +178,11 @@
 		-ms-transform: translate3d(@x, @y, @z);
 			transform: translate3d(@x, @y, @z);
 }
+.translate3d(@x, @y: 0, @z: 0) {
+	-webkit-transform: translate3d(@x, @y, @z);
+		-ms-transform: translate3d(@x, @y, @z);
+			transform: translate3d(@x, @y, @z);
+}
 
 
 
@@ -210,24 +206,20 @@
 			backface-visibility: @value;
 }
 
-
-
-
-
 // Flexbox
 // -------
 .flexbox() {
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: flex;
+	display: flex; 
 }
 
 .flex(@values) {
 	-ms-flex:  @values;
 	-webkit-box-flex: @values;
 	-webkit-flex:  @values;
-	flex:  @values;
+	flex:  @values; 
 }
 
 .order(@value) {

@@ -1,67 +1,60 @@
 <?php get_header(); ?>
+<div id="content" class="site-wrapper clearfix">
+<div id="inner-content" class="column-wrapper">
+<main id="main" class="column column-66 clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-			<div id="content">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div id="inner-content" class="wrap cf">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<header class="article-header">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<p class="byline vcard">
+				<?php printf( __( 'Posted', 'bonestheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'bonestheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+			</p>
 
-								<header class="article-header">
+		</header> <?php // end article header ?>
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+		<section class="entry-content cf" itemprop="articleBody">
+			<?php
+				// the content (pretty self explanatory huh)
+				the_content();
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'bonestheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'bonestheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
+				/*
+				 * Link Pages is used in case you have posts that are set to break into
+				 * multiple pages. You can remove this if you don't plan on doing that.
+				 *
+				 * Also, breaking content up into multiple pages is a horrible experience,
+				 * so don't do it. While there are SOME edge cases where this is useful, it's
+				 * mostly used for people to get more ad views. It's up to you but if you want
+				 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
+				 *
+				 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+				 *
+				*/
+				wp_link_pages( array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+				) );
+			?>
+		</section> <?php // end article section ?>
 
-								</header> <?php // end article header ?>
+		<footer class="article-footer cf">
 
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
+		</footer>
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
+		<?php comments_template(); ?>
 
-								<footer class="article-footer cf">
+	</article>
 
-								</footer>
+	<?php endwhile; endif; ?>
 
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; endif; ?>
-
-						</main>
-
-						<?php get_sidebar(); ?>
-
-				</div>
-
-			</div>
-
+</main>
+<?php get_sidebar(); ?>
+</div>
+</div>
 <?php get_footer(); ?>
