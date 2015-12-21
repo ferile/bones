@@ -5,7 +5,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
 		<header class="article-header">
 
@@ -21,11 +21,11 @@
 
 		</header>
 
-		<section class="entry-content cf">
+		<div class="entry-content clearfix">
 			<?php the_content(); ?>
-		</section>
+		</div>
 
-		<footer class="article-footer cf">
+		<footer class="article-footer clearfix">
 			<p class="footer-comment-count">
 				<?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
 			</p>
@@ -46,7 +46,7 @@
 
 	<?php else : ?>
 
-			<article id="post-not-found" class="hentry cf">
+			<article id="post-not-found" class="hentry clearfix">
 					<header class="article-header">
 						<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 				</header>

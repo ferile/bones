@@ -22,7 +22,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 		<header class="article-header">
 
@@ -33,7 +33,7 @@
 
 		</header>
 
-		<section class="entry-content cf">
+		<div class="entry-content clearfix">
 			<?php
 				// the content (pretty self explanatory huh)
 				the_content();
@@ -57,7 +57,7 @@
 					'link_after'  => '</span>',
 				) );
 			?>
-		</section> <!-- end article section -->
+		</div> <!-- end article section -->
 
 		<footer class="article-footer">
 			<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
@@ -72,7 +72,7 @@
 
 	<?php else : ?>
 
-			<article id="post-not-found" class="hentry cf">
+			<article id="post-not-found" class="hentry clearfix">
 				<header class="article-header">
 					<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 				</header>

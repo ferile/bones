@@ -5,7 +5,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 		<header class="article-header">
 
@@ -17,7 +17,7 @@
 
 		</header> <?php // end article header ?>
 
-		<section class="entry-content cf" itemprop="articleBody">
+		<div class="entry-content clearfix" itemprop="articleBody">
 			<?php
 				// the content (pretty self explanatory huh)
 				the_content();
@@ -41,9 +41,9 @@
 					'link_after'  => '</span>',
 				) );
 			?>
-		</section> <?php // end article section ?>
+		</div> <?php // end article section ?>
 
-		<footer class="article-footer cf">
+		<footer class="article-footer clearfix">
 
 		</footer>
 

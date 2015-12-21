@@ -20,7 +20,7 @@ Template Name: Custom Page Example
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 		<header class="article-header">
 
@@ -33,7 +33,7 @@ Template Name: Custom Page Example
 
 		</header>
 
-		<section class="entry-content cf" itemprop="articleBody">
+		<section class="entry-content clearfix" itemprop="articleBody">
 			<?php
 				// the content (pretty self explanatory huh)
 				the_content();
@@ -72,7 +72,7 @@ Template Name: Custom Page Example
 
 	<?php endwhile; else : ?>
 
-			<article id="post-not-found" class="hentry cf">
+			<article id="post-not-found" class="hentry clearfix">
 					<header class="article-header">
 						<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 				</header>

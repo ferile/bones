@@ -10,7 +10,7 @@
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
 		<header class="entry-header article-header">
 
@@ -26,13 +26,13 @@
 
 		</header>
 
-		<section class="entry-content cf">
+		<div class="entry-content clearfix">
 
 			<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
 			<?php the_excerpt(); ?>
 
-		</section>
+		</div>
 
 		<footer class="article-footer">
 
@@ -46,7 +46,7 @@
 
 	<?php else : ?>
 
-			<article id="post-not-found" class="hentry cf">
+			<article id="post-not-found" class="hentry clearfix">
 				<header class="article-header">
 					<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 				</header>

@@ -7,7 +7,9 @@
 @import "base/_icons";
 @import "base/_typography";
 @import "base/_form-elements";  
-@import "base/_buttons";   
+@import "base/_buttons";
+@import "base/_wordpress.less";
+
 
 @media @large {
 	@import "large/_utility-large";
@@ -15,16 +17,19 @@
 	@import "large/_typography";
 	@import "large/_structure";
 	@import "large/_form-layout";
+	@import "large/_wordpress.less";	
 }
 
 @media @medium {
 	@import "medium/_utility-medium";
 	@import "medium/_columns";
+	@import "medium/_wordpress.less";
 }
 
 @import "tablet/_tablet" 			@tablet-landscape;
 @import "tablet/_tablet-portrait"	@tablet-portrait;
 @import "tablet/_utility-tablet"	@tablet-portrait;
+@import "tablet/_wordpress.less";
 
 @media @small {
 	@import "small/_utility-small";
@@ -33,6 +38,8 @@
 	@import "small/_typography";
 	@import "small/_structure";
 	@import "small/_columns";
+	@import "small/_wordpress.less"; 
 }
 
 @import "print/_print"	@print;
+@import "print/_wordpress.less" @print;

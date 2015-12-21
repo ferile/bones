@@ -3,7 +3,7 @@
 <div id="inner-content" class="column-wrapper">
 <main id="main" class="column column-66 clearfix" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-	<article id="post-not-found" class="hentry cf">
+	<article id="post-not-found" class="hentry clearfix">
 
 		<header class="article-header">
 
