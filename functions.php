@@ -24,9 +24,6 @@ function bones_ahoy() {
   //Allow editor style.
   add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
-  // let's get language support going, if you need it
-  load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
-
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );
 
@@ -160,8 +157,8 @@ function bones_register_sidebars() {
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
 	));
 
 	/*
@@ -178,8 +175,8 @@ function bones_register_sidebars() {
 		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
 	));
 
 	To call the sidebar in your template, you can just copy

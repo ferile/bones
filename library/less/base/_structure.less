@@ -1,0 +1,117 @@
+body {
+		padding-bottom: 200px;
+}
+
+// Site content
+// ---------------------------
+.site-content {
+	padding: 10vh 0 0 0; 
+	text-shadow:0 2px 2px fade(@black, 90%);
+	position: relative;
+	z-index: @z-max;
+}
+
+
+	.image-avatar {
+		display: block;
+		border-radius: 50%;
+		width: 100px;
+		box-shadow: 5px 5px 20px fade(@black, 50%);
+		border: solid 3px fade(@white, 50%);
+		margin: auto;
+		margin-bottom: @baseline-medium;
+		.transition(all 1s @cubic-bezier); 
+
+		.js & {
+			.translate(0, -150%, 0);
+		}
+	}
+ 
+
+
+
+// Portfolio
+// ---------------------------
+.portfolio-link {
+	position: relative;
+	display: block;
+	background: @white;
+	box-shadow: inset 0 0 40px 5px fade(@black, 50%);
+	&:hover {
+
+		.portfolio-brand-logo {
+			background: transparent;
+			.transform(scale(1.2))
+		}
+		.portfolio-thumbnail  {
+			border-color: @white;
+		}
+		.portfolio-thumbnail {
+			opacity: .2;
+		}
+	}
+}
+
+	.portfolio-brand-logo-wrapper {
+		position: absolute;
+		z-index: @z-max - 1;
+		left: 0;
+		right: 0;
+		top: 50%;
+		margin-top: -20px;
+	}
+
+		.portfolio-brand-logo {				
+			padding: 5px;
+			background: fade(@white, 50%);
+			display: block;
+			margin: auto;
+			.transition(all 500ms @cubic-bezier); 
+			
+			&.is-skinny-logo { height: 30px;}
+			&.is-deep-logo { height: 60px;}
+		}
+		
+		.portfolio-thumbnail {
+			position: relative;
+			z-index: @z-max - 2;
+			display: block;
+			margin: auto;
+			border: solid 3px fade(@white, 50%);
+			.transition(all 500ms @cubic-bezier); 
+		}
+
+
+// Footer
+// ---------------------------
+.site-footer {
+	position: fixed;
+	z-index: @z-max;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background: @white; 
+	padding: 10px 0;
+}
+	.social-item { 
+		margin-right: @baseline-large;
+		.font-size(18);
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+		.social-link:hover {
+			.icon-github {		color: @color-github;}
+			.icon-email {		color: @color-email;}
+			.icon-skype {		color: @color-skype;}
+			.icon-facebook {	color: @color-facebook;}
+			.icon-twitter {		color: @color-twitter;}
+			.icon-linkedin {	color: @color-linkedin;} 
+		}
+
+		.social-icon {
+			font-size: 20px;
+			.transition(color 200ms @cubic-bezier)
+		}
