@@ -1,4 +1,4 @@
-<?php include('includes/_page-start.php'); ?> 
+<?php include('includes/_page-start.php'); ?>
 
 	<h1>
 		<?php _e( 'Blog', 'bonestheme' ); ?>

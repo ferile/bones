@@ -155,10 +155,10 @@ function bones_register_sidebars() {
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'bonestheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="%2$s widget baseline-medium">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="h4">',
+		'after_title' => '</h3>',
 	));
 
 	/*
@@ -173,7 +173,7 @@ function bones_register_sidebars() {
 		'id' => 'sidebar2',
 		'name' => __( 'Sidebar 2', 'bonestheme' ),
 		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="%2$s widget baseline-medium">',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',

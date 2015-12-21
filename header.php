@@ -21,37 +21,37 @@
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-<div id="container">
-	<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+<header id="site-header" class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-		<div id="inner-header" class="site-wrapper clearfix">
+	<div class="site-wrapper clearfix">
 
-			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-			<div id="logo" class="h1 text-center" itemscope itemtype="http://schema.org/Organization">
-				<a href="<?php echo home_url(); ?>" rel="nofollow">
-					<?php bloginfo('name'); ?>
-				</a>
-			</div>
-
-			<?php // if you'd like to use the site description you can un-comment it below ?>
-			<?php // bloginfo('description'); ?>
-
-
-			<nav role="navigation" class="site-navigation-wrapper text-center clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">
-				<?php wp_nav_menu(array(  
-					'container' => false,                           // remove nav container 
-					'container_class' => '',                 // class of container (should you choose to use it)
-					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-					'menu_class' => 'menu-site-navigation / large-menu-horz-inline / small-menu-vert',               // adding custom nav class
-					'theme_location' => 'main-nav',                 // where it's located in the theme
-					'before' => '',                                 // before the menu
-					'after' => '',                                  // after the menu
-					'link_before' => '',                            // before each link
-					'link_after' => '',                             // after each link
-					'depth' => 0,                                   // limit the depth of the nav
-					'fallback_cb' => ''                             // fallback function (if there is one)
-				)); ?>
-
-			</nav>
+		<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+		<div id="logo" class="h1 text-center" itemscope itemtype="http://schema.org/Organization">
+			<a href="<?php echo home_url(); ?>" rel="nofollow">
+				<?php bloginfo('name'); ?>
+			</a>
 		</div>
-	</header>
+
+		<?php // if you'd like to use the site description you can un-comment it below ?>
+		<?php // bloginfo('description'); ?>
+
+
+		<nav role="navigation" class="site-navigation-wrapper text-center clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<?php wp_nav_menu(array(  
+				'container' => false,                           // remove nav container 
+				'container_class' => '',                 // class of container (should you choose to use it)
+				'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+				'menu_class' => 'menu-site-navigation / large-menu-horz-inline / small-menu-vert',               // adding custom nav class
+				'theme_location' => 'main-nav',                 // where it's located in the theme
+				'before' => '',                                 // before the menu
+				'after' => '',                                  // after the menu
+				'link_before' => '',                            // before each link
+				'link_after' => '',                             // after each link
+				'depth' => 0,                                   // limit the depth of the nav
+				'fallback_cb' => ''                             // fallback function (if there is one)
+			)); ?>
+
+		</nav>
+	</div>
+</header>
+<div class="site-wrapper clearfix">
