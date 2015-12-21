@@ -1,29 +1,34 @@
-			<footer role="contentinfo">
-			
-				<div id="inner-footer" class="clearfix">
-					
-					<nav>
-						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
+			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+
+				<div id="inner-footer" class="wrap cf">
+
+					<nav role="navigation">
+						<?php wp_nav_menu(array(
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
+    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
+    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
+    					'theme_location' => 'footer-links',             // where it's located in the theme
+    					'before' => '',                                 // before the menu
+    					'after' => '',                                  // after the menu
+    					'link_before' => '',                            // before each link
+    					'link_after' => '',                             // after each link
+    					'depth' => 0,                                   // limit the depth of the nav
+    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+						)); ?>
 					</nav>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?> <?php _e("is powered by", "bonestheme"); ?> <a href="http://wordpress.org/" title="WordPress">WordPress</a> <span class="amp">&</span> <a href="http://www.themble.com/bones" title="Bones" class="footer_bones_link">Bones</a>.</p>
-				
-				</div> <!-- end #inner-footer -->
-				
-			</footer> <!-- end footer -->
-		
-		</div> <!-- end #container -->
-		
-		<!-- scripts are now optimized via Modernizr.load -->	
-		<script src="<?php echo get_template_directory_uri(); ?>/library/js/scripts.js"></script>
-		
-		<!--[if lt IE 7 ]>
-  			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-		<![endif]-->
-		
-		<?php wp_footer(); // js scripts are inserted using this function ?>
+
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+
+				</div>
+
+			</footer>
+
+		</div>
+
+		<?php // all js scripts are loaded in library/bones.php ?>
+		<?php wp_footer(); ?>
 
 	</body>
 
-</html>
+</html> <!-- end of site. what a ride! -->
