@@ -1,0 +1,52 @@
+// ********************
+// POSTS & CONTENT STYLES
+// ********************
+.entry-content {
+	
+	.alignleft, img.alignleft {
+		margin-right: @baseline-medium;
+		float: left;
+	}
+	.alignright, img.alignright {
+		margin-left: @baseline-medium;
+		float: right;
+	}
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
+	}
+
+}
+
+// ********************
+// SIDEBARS & ASIDES
+// ********************
+.sidebar {}
+
+.widgettitle {}
+
+.widget {
+
+	ul {
+		.menu-mixin();
+
+		li {
+			&:first-child {}
+			&:last-child {}
+			a {}
+			
+			/* deep nesting */
+			ul {
+				.menu-mixin();
+			}
+		}
+	}
+}
+
+.no-widgets {
+
+}
+
+
