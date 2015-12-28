@@ -1,4 +1,9 @@
-# Bones
+# My Wordpress starter kit - forked from Bones
+
+My forked copy of the "Bones" Wordpress theme, by Eddie Machado.
+
+Eddie has written a great starter theme, one which I have adapted for my own projects. I have added my own Front End Framework, and ammended the PHP templates to reflect this. Many thanks to Eddie for writing such a useful theme! His readme file as follows :
+
 A Lightweight Wordpress Development Theme
 
 Bones is designed to make the life of developers easier. It's built
